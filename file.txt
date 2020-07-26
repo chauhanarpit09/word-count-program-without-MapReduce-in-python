@@ -1,0 +1,76 @@
+Hadoop Fundamentals, 21July2020
+Dear Students ,
+We will meet on Thursday and Friday on Google Meet; I will share the link on Moodle.
+Till then kindly go through the contents what I have shared with you and be ready for QUIZ of 5
+Marks (10 questions) in the next week.
+Thanks
+Differentiate between Structured and Unstructured data.
+Data which can be stored in traditional database systems in the form of rows and columns, for
+example the online purchase transactions can be referred to as Structured Data. Data which can
+be stored only partially in traditional database systems, for example, data in XML records can be
+referred to as semi structured data. Unorganized and raw data that cannot be categorized as semi
+structured or structured data is referred to as unstructured data. Facebook updates, Tweets on
+Twitter, Reviews, web logs, etc. are all examples of unstructured data.
+On what concept the Hadoop framework works?
+Hadoop Framework works on the following two core components1)HDFS – Hadoop Distributed File System is the java based file system for scalable and reliable
+storage of large datasets. Data in HDFS is stored in the form of blocks and it operates on the
+Master Slave Architecture.
+2)Hadoop MapReduce-This is a java-based programming paradigm of Hadoop framework that
+provides scalability across various Hadoop clusters. MapReduce distributes the workload into
+various tasks that can run in parallel. Hadoop jobs perform 2 separate tasks- job. The map job
+breaks down the data sets into key-value pairs or tuples. The reduce job then takes the output of 
+the map job and combines the data tuples to into smaller set of tuples. The reduce job is always
+performed after the map job is executed.
+What is the best hardware configuration to run Hadoop?
+The best configuration for executing Hadoop jobs is dual core machines or dual processors with
+4GB or 8GB RAM that use ECC memory. Hadoop highly benefits from using ECC memory though
+it is not low - end. ECC memory is recommended for running Hadoop because most of the Hadoop
+users have experienced various checksum errors by using non ECC memory. However, the
+hardware configuration also depends on the workflow requirements and can change accordingly.
+What are the most commonly defined input formats in Hadoop?
+The most common Input Formats defined in Hadoop are:
+• Text Input Format- This is the default input format defined in Hadoop.
+• Key Value Input Format- This input format is used for plain text files wherein the files are
+broken down into lines.
+• Sequence File Input Format- This input format is used for reading files in sequence.
+What is commodity hardware?
+Commodity Hardware refers to inexpensive systems that do not have high availability or high
+quality. Commodity Hardware consists of RAM because there are specific services that need to be
+executed on RAM. Hadoop can be run on any commodity hardware and does not require any
+super computers or high-end hardware configuration to execute jobs.
+what are five V’s of Big Data?
+1. Volume: The volume represents the amount of data which is growing at an exponential
+rate i.e. in Petabytes and Exabytes.
+2. Velocity: Velocity refers to the rate at which data is growing, which is very fast. Today,
+yesterday’s data are considered as old data. Nowadays, social media is a major contributor
+to the velocity of growing data.
+3. Variety: Variety refers to the heterogeneity of data types. In another word, the data which
+are gathered has a variety of formats like videos, audios, csv, etc. So, these various formats
+represent the variety of data.
+4. Veracity: Veracity refers to the data in doubt or uncertainty of data available due to data
+inconsistency and incompleteness. Data available can sometimes get messy and may be
+difficult to trust. With many forms of big data, quality and accuracy are difficult to control.
+The volume is often the reason behind for the lack of quality and accuracy in the data.
+5. Value: It is all well and good to have access to big data but unless we can turn it into a
+value it is useless. By turning it into value I mean, Is it adding to the benefits of the
+organizations? Is the organization working on Big Data achieving high ROI (Return On
+Investment)? Unless, it adds to their profits by working on Big Data, it is useless.
+Tell me about the various Hadoop daemons and their roles in a Hadoop
+cluster.
+Generally approach this question by first explaining the HDFS daemons i.e. NameNode, DataNode
+and Secondary NameNode, and then moving on to the YARN daemons i.e. ResorceManager and
+NodeManager, and lastly explaining the JobHistoryServer.
+• NameNode: It is the master node which is responsible for storing the metadata of all the
+files and directories. It has information about blocks, that make a file, and where those
+blocks are located in the cluster.
+• Datanode: It is the slave node that contains the actual data.
+• Secondary NameNode: It periodically merges the changes (edit log) with the FsImage
+(Filesystem Image), present in the NameNode. It stores the modified FsImage into
+persistent storage, which can be used in case of failure of NameNode.
+• ResourceManager: It is the central authority that manages resources and schedule
+applications running on top of YARN.
+• NodeManager: It runs on slave machines and is responsible for launching the
+application’s containers (where applications execute their part), monitoring their resource
+usage (CPU, memory, disk, network) and reporting these to the ResourceManager.
+• JobHistoryServer: It maintains information about MapReduce jobs after the Application
+
