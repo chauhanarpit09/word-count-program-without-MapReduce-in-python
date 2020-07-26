@@ -7,6 +7,7 @@ l = re.sub("[:,.?()#$]","",l).split()
 
 d = {}
 for i in l:
+    i = i.capitalize()
     if i in d.keys():
         d[i] = d[i]+1
     else:
